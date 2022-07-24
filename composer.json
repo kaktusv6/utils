@@ -1,0 +1,19 @@
+{
+    "name": "nkf/utils",
+    "description": "Helper classes for easier use of language functions or for solving trivial problems",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Utils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vasiliy Nikiforov",
+            "email": "kaktusv6@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    }
+}
