@@ -12,7 +12,7 @@ final class ArrayUtils implements Utils
      * @param array $array
      * @return mixed
      */
-    public static function getRandomValue(array $array): mixed
+    public static function getRandomValue(array $array)
     {
         // TODO if $array is empty? exception or return null
         return $array[array_rand($array)];
@@ -29,7 +29,7 @@ final class ArrayUtils implements Utils
     public static function getRandomValues(array $array, ?int $count = null): array
     {
         if ($count !== null && $count <= 0)
-            throw new ValidateException('"count" mus be >= 0');
+            throw new ValidateException(self::class, '"count" mus be >= 0');
 
         if ($count === null)
             $count = random_int(1, count($array));
@@ -49,7 +49,7 @@ final class ArrayUtils implements Utils
      * @param array $array
      * @return mixed
      */
-    public static function first(array $array): mixed
+    public static function first(array $array)
     {
         return $array[array_key_first($array)];
     }
