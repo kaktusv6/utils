@@ -2,6 +2,11 @@
     "name": "nkf/utils",
     "description": "Helper classes for easier use of language functions or for solving trivial problems",
     "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Utils\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Vasiliy Nikiforov",
@@ -9,19 +14,6 @@
         }
     ],
     "require": {
-        "php": ">=7.4"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "9.5.16"
-    },
-    "autoload": {
-        "psr-4": {
-            "Utils\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
+        "php": ">=8.1"
     }
 }
