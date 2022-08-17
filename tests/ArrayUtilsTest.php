@@ -46,4 +46,11 @@ class ArrayUtilsTest extends TestCase
         $firstValue = ArrayUtils::first($values);
         $this->assertEquals(array_shift($values), $firstValue);
     }
+
+    /** @dataProvider dataProviderValues */
+    public function testGetLastValue(array $values): void
+    {
+        $lastValue = ArrayUtils::last($values);
+        $this->assertEquals(array_pop($values), $lastValue);
+    }
 }

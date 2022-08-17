@@ -51,6 +51,17 @@ final class ArrayUtils implements Utils
      */
     public static function first(array $array)
     {
-        return $array[array_key_first($array)];
+        return $array[array_key_first($array)] ?? null;
+    }
+
+    /**
+     * Method for get last element from array
+     *
+     * @param array $array
+     * @return mixed
+     */
+    public static function last(array $array)
+    {
+        return $array[array_key_last($array)] ?? null;
     }
 }
