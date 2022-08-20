@@ -11,7 +11,8 @@
     "require": {
         "php": ">=7.4",
         "phpunit/phpunit": "<=9.5.16",
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
