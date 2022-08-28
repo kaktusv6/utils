@@ -15,13 +15,13 @@
         "ext-json": "*"
     },
     "autoload": {
-        "psr-4": {
-            "Utils\\": "src/"
-        }
+        "classmap": [
+            "src/"
+        ]
     },
     "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
+        "classmap": [
+            "tests/"
+        ]
     }
 }
