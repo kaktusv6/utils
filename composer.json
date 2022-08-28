@@ -2,6 +2,7 @@
     "name": "nkf/utils",
     "description": "Helper classes for easier use of language functions or for solving trivial problems",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Vasiliy Nikiforov",
