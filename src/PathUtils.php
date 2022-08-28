@@ -7,14 +7,15 @@ use Utils\Exceptions\ValidateException;
 
 final class PathUtils implements Utils
 {
-    public static function isDirectory(string $path) : bool
-    {
-        return is_dir($path);
-    }
-
+    /**
+     * Method get files from directory without '.', '..'
+     *
+     * @param string $pathDirectory
+     * @return array
+     */
     public static function getFiles(string $pathDirectory) : array
     {
-        if (!self::isDirectory($pathDirectory))
+        if (!is_dir($pathDirectory))
             throw new ValidateException(self::class, "$pathDirectory is not directory");
         $files = scandir($pathDirectory);
         foreach ($files as $key => $file)
@@ -23,6 +24,12 @@ final class PathUtils implements Utils
         return $files;
     }
 
+    /**
+     * Method join paths with separator current OS
+     *
+     * @param ...$paths
+     * @return string
+     */
     public static function join(...$paths) : string
     {
         $result = [];
@@ -40,6 +47,8 @@ final class PathUtils implements Utils
     }
 
     /**
+     * Method get content from file by path
+     *
      * @throws FailGetContent
      */
     public static function getContent(string $path)
@@ -50,11 +59,23 @@ final class PathUtils implements Utils
         return $result;
     }
 
+    /**
+     * Method checks that the path belongs to a Unix system
+     *
+     * @param string $path
+     * @return bool
+     */
     public static function isUncPath(string $path) : bool
     {
         return StringUtils::startWith($path, '\\\\');
     }
 
+    /**
+     * Method explode path by separator
+     *
+     * @param string $path
+     * @return array
+     */
     public static function splitPath(string $path) : array
     {
         return explode(DIRECTORY_SEPARATOR, self::normalizePath($path));
@@ -68,6 +89,12 @@ final class PathUtils implements Utils
             ));
     }
 
+    /**
+     * Method get lead separator by OS
+     *
+     * @param string $path
+     * @return string
+     */
     public static function getLeadingSeparator(string $path) : string
     {
         $result = (($path[0] ?? '') === DIRECTORY_SEPARATOR) ? DIRECTORY_SEPARATOR : '';
@@ -78,6 +105,12 @@ final class PathUtils implements Utils
         return $result;
     }
 
+    /**
+     * Method trim path
+     *
+     * @param string $path
+     * @return string
+     */
     public static function trimSeparators(string $path) : string
     {
         return trim($path, '\\/');
