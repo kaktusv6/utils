@@ -17,12 +17,6 @@ class PathUtilsTest extends TestCase
     }
 
     /** @dataProvider dataProviderDirectories */
-    public function testCheckDirectory(string $pathToDirectory): void
-    {
-        $this->assertTrue(PathUtils::isDirectory($pathToDirectory));
-    }
-
-    /** @dataProvider dataProviderDirectories */
     public function testGetFilesFromDirectory(string $pathToDirectory): void
     {
         $this->assertNotEmpty(PathUtils::getFiles($pathToDirectory));
@@ -33,12 +27,6 @@ class PathUtilsTest extends TestCase
         return [
             'Test on fixture file' => [__DIR__ . '/fixtures/directory/file.txt'],
         ];
-    }
-
-    /** @dataProvider dataProviderFiles */
-    public function testFailCheckDirectory(string $pathToFile): void
-    {
-        $this->assertFalse(PathUtils::isDirectory($pathToFile));
     }
 
     /** @dataProvider dataProviderFiles */

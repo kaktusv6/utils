@@ -3,7 +3,6 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Utils\ArrayUtils;
 use Utils\StringUtils;
 
 class StringUtilsTest extends TestCase
