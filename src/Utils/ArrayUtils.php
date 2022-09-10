@@ -4,7 +4,7 @@ namespace Utils;
 
 use Utils\Exceptions\ValidateException;
 
-final class ArrayUtils implements Utils
+final class ArrayUtils implements BaseUtils
 {
     /**
      * Method for get a single random value from an array

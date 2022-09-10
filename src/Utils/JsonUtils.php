@@ -2,7 +2,7 @@
 
 namespace Utils;
 
-final class JsonUtils implements Utils
+final class JsonUtils implements BaseUtils
 {
     /**
      * Method decode json to array

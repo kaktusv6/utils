@@ -2,7 +2,7 @@
 
 namespace Utils;
 
-final class StringUtils implements Utils
+final class StringUtils implements BaseUtils
 {
     /**
      * Method for check prefix to string value

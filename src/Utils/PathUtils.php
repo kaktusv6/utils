@@ -5,7 +5,7 @@ namespace Utils;
 use Utils\Exceptions\FailGetContent;
 use Utils\Exceptions\ValidateException;
 
-final class PathUtils implements Utils
+final class PathUtils implements BaseUtils
 {
     /**
      * Method get files from directory without '.', '..'

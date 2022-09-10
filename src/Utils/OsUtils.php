@@ -2,7 +2,7 @@
 
 namespace Utils;
 
-final class OsUtils implements Utils
+final class OsUtils implements BaseUtils
 {
     /**
      * Method check if current os Windows

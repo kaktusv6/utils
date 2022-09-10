@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Utils\\": "src/"
+            "Utils\\": "src/Utils/"
         }
     },
     "autoload-dev": {

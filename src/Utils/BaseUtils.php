@@ -2,4 +2,4 @@
 
 namespace Utils;
 
-interface Utils {}
+interface BaseUtils {}
