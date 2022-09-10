@@ -18,9 +18,9 @@
         "phpunit/phpunit": "<=9.5.16"
     },
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "Utils\\": "src/"
+        }
     },
     "autoload-dev": {
         "classmap": [
